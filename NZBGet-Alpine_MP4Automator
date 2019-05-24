@@ -20,12 +20,11 @@ pip install 'guessit<2'
 pip install 'subliminal<2'
 pip install stevedore
 pip install python-dateutil
-# pip install deluge-client
 pip install qtfaststart
 
 
 ##Get MP4Automator
-[[ ! -d /mp4automator/.git ]] && (git clone git://github.com/mdhiggins/sickbeard_mp4_automator.git /mp4automator && chown -R abc:abc /mp4automator)
+[[ ! -d /mp4automator/.git ]] && (git clone git://github.com/mdhiggins/sickbeard_mp4_automator.git /mp4automator && chown -R 501:1000 /mp4automator)
 
 ##Use .ini if present or copy sample
 [[ ! -f /mp4automator/autoProcess.ini ]] && (cp /mp4automator/autoProcess.ini.sample /mp4automator/autoProcess.ini)
@@ -40,4 +39,4 @@ pip install qtfaststart
 
 cd /mp4automator
 git pull
-chown -R abc:abc /config
+chown -R 501:1000 /config
