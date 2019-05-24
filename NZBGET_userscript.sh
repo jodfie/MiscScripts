@@ -29,10 +29,10 @@ pip install qtfaststart
 
 
 ##Get MP4Automator
-[[ ! -d /mp4automator/.git ]] && (git clone git://github.com/mdhiggins/sickbeard_mp4_automator.git /mp4automator && chown -R abc:abc /mp4automator)
+[[ ! -d /config/sma/.git ]] && (git clone git://github.com/mdhiggins/sickbeard_mp4_automator.git /config/sma/ && chown -R 501:1000 /sma)
 
 ##Use .ini if present or copy sample
-[[ ! -f /mp4automator/autoProcess.ini ]] && (cp /mp4automator/autoProcess.ini.sample /mp4automator/autoProcess.ini)
+[[ ! -f /config/sma/autoProcess.ini ]] && (cp /config/sma/autoProcess.ini.sample /config/sma/autoProcess.ini)
 
 ###NZBGet Script
 [[ ! -f /scripts/mp4/NZBGetPostProcess.py ]] && (cp /mp4automator/mp4/NZBGetPostProcess.py /scripts/mp4/)
@@ -42,6 +42,6 @@ pip install qtfaststart
 # test if updates have been disabled
 [ "$ADVANCED_DISABLEUPDATES" ] && exit 0
 
-cd /mp4automator
+cd /config/sma/
 git pull
-chown -R abc:abc /config
+chown -R 501:1000 /config
