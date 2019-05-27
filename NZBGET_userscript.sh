@@ -1,8 +1,7 @@
 ### Script to be used with LinuxServer.io DockerBase Image of NZBGet
 ### Will install MP4Automator (https://github.com/mdhiggins/sickbeard_mp4_automator) and Dependencies
 
-
-sudo add-apt-repository -qy ppa:mc3man/trusty-media
+add-apt-repository ppa:mc3man/trusty-media
 
 apt-get -q update
 apt-get -q update --fix-missing
@@ -10,7 +9,7 @@ apt-get -qy upgrade
 
 easy_install pip
 
-##Dependencies###############
+##Dependencies
 apt-get install -qy git
 apt-get install -qy ffmpeg
 
@@ -22,9 +21,8 @@ pip install requests-cache
 pip install babelfish
 pip install 'guessit<2'
 pip install 'subliminal<2'
-pip install stevedore
+pip install stevedore==1.19.1
 pip install python-dateutil
-# pip install deluge-client
 pip install qtfaststart
 
 
@@ -36,8 +34,6 @@ pip install qtfaststart
 
 ###NZBGet Script
 [[ ! -f /scripts/mp4/NZBGetPostProcess.py ]] && (cp /mp4automator/mp4/NZBGetPostProcess.py /scripts/mp4/)
-
-
 
 # test if updates have been disabled
 [ "$ADVANCED_DISABLEUPDATES" ] && exit 0
