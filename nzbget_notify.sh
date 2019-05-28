@@ -6,7 +6,7 @@ apt-get update --fix-missing
 apt-get upgrade
 
 ##Dependencies
-pip install apprise >= 0.7.0
+pip install apprise
 pip install pynzbget
 pip install chardet
 
