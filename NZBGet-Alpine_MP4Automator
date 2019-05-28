@@ -11,7 +11,6 @@ apk add ffmpeg
 curl https://bootstrap.pypa.io/ez_setup.py -o - | python
 easy_install pip
 
-
 pip install requests 
 pip install requests[security]
 pip install requests-cache
@@ -22,10 +21,6 @@ pip install stevedore
 pip install python-dateutil
 pip install qtfaststart
 
-## Make Directories for Script
-mkdir /scripts
-mkdir /scripts/mp4
-
 ##Get MP4Automator
 [[ ! -d /config/sma/.git ]] && (git clone git://github.com/mdhiggins/sickbeard_mp4_automator.git /config/sma && chown -R 501:1000 /config/sma)
 
@@ -33,9 +28,7 @@ mkdir /scripts/mp4
 [[ ! -f /config/sma/autoProcess.ini ]] && (cp /config/sma/autoProcess.ini.sample /config/sma/autoProcess.ini)
 
 ###NZBGet Script
-[[ ! -f /scripts/mp4/NZBGetPostProcess.py ]] && (cp /config/sma/NZBGetPostProcess.py /scripts/mp4/)
-
-
+[[ ! -f /config/scripts/mp4/NZBGetPostProcess.py ]] && (cp /config/sma/NZBGetPostProcess.py /config/scripts/mp4/)
 
 # test if updates have been disabled
 [ "$ADVANCED_DISABLEUPDATES" ] && exit 0
