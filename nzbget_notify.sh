@@ -20,7 +20,7 @@ pip install chardet
 [[ ! -f /config/scripts/nzbnotify/Notify.py ]] && (cp /config/nzbnotify/Notify.py /config/scripts/nzbnotify/)
 
 ###NZBNotify Folder
-[[ ! -f /config/scripts/nzbnotify/Notify ]] && (cp /config/nzbnotify/Notify /config/scripts/nzbnotify/Notify)
+[[ ! -r /config/scripts/nzbnotify/Notify ]] && (cp /config/nzbnotify/Notify /config/scripts/nzbnotify/Notify)
 
 # test if updates have been disabled
 [ "$ADVANCED_DISABLEUPDATES" ] && exit 0
