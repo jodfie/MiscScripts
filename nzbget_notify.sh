@@ -13,8 +13,8 @@ pip install chardet
 ##Get NZBNotify
 [[ ! -d /config/nzbnotify/.git ]] && (git clone git://github.com/caronc/nzb-notify.git /config/nzbnotify/ && chown -R 501:1000 /config/nzbnotify)
 
-##NZBNotify Folder
-[[ ! -d /scripts/nzbnotify ]] && (mkdir /scripts/nzbnotify/Notify)
+##Check for NZBNotify Folder
+[[ ! -d /scripts/nzbnotify ]] && (mkdir /scripts/nzbnotify/)
 
 ###NZBNotify Script
 [[ ! -f /scripts/nzbnotify/Notify.py ]] && (cp /config/nzbnotify/Notify.py /scripts/nzbnotify/)
